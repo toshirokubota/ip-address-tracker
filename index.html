@@ -30,9 +30,9 @@
     <picture>
       <source srcset="./images/pattern-bg-desktop.png" media="(min-width: 750px)">
       <source srcset="./images/pattern-bg-mobile.png" media="(min-width: 325px)">
-      <img src="./images/pattern-bg-mobile.png" alt=""/>
+      <img src="./images/pattern-bg-mobile.png" alt="a presentational pattern"/>
     </picture>
-    <div id="map" class="map">
+    <div id="map" class="map" area-label="map of the ip location shown here">
     </div>  
     <div class="container">
       <h1>
@@ -41,33 +41,33 @@
       <div class="search-box-container">
         <input type="text" placeholder="Search for any IP address or domain"
         id="search-box" class="search-box"/>
-        <button id="search-box-button" class="search-box-button" area-label="search button"></button>
+        <button id="search-box-button" class="search-box-button" aria-label="search button"></button>
       </div>
       
       <div class="response-card">
         <div class="response-entry">
           <h2>IP Address</h2>
           <div class="response-value">
-            <span id="ip-address"></span>
+            <span id="ip-address" aria-label="the IP address"></span>
           </div>
         </div>
         <div class="response-entry">
           <h2>Location</h2>
           <div class="response-value">
-            <span id="location"></span>
+            <span id="location" aria-label="the location (city, state, country)"></span>
           </div>
         </div>
         <div class="response-entry">
           <h2>Timezone</h2>
           <div class="response-value">
-            UTC-<span id="timezone"></span>
+            UTC-<span id="timezone" aria-label="the time zone"></span>
           </div>
         </div>
            <!-- add offset value dynamically using the API -->
         <div class="response-entry">
           <h2>ISP</h2>        
           <div class="response-value">
-            <span id="isp"></span>
+            <span id="isp" aria-label="Internet service provider"></span>
           </div>
         </div>
       </div>
