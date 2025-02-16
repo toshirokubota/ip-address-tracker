@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>  
+  <script defer src="./main.js"></script>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <picture>
+      <source srcset="./images/pattern-bg-desktop.png" media="(min-width: 750px)">
+      <source srcset="./images/pattern-bg-mobile.png" media="(min-width: 325px)">
+      <img src="./images/pattern-bg-mobile.png" alt=""/>
+    </picture>
+    <div id="map" class="map">
+    </div>  
+    <div class="container">
+      <h1>
+        IP Address Tracker
+      </h1>
+      <div class="search-box-container">
+        <input type="text" placeholder="Search for any IP address or domain"
+        id="search-box" class="search-box"/>
+        <button id="search-box-button" class="search-box-button" area-label="search button"></button>
+      </div>
+      
+      <div class="response-card">
+        <div class="response-entry">
+          <h2>IP Address</h2>
+          <div class="response-value">
+            <span id="ip-address"></span>
+          </div>
+        </div>
+        <div class="response-entry">
+          <h2>Location</h2>
+          <div class="response-value">
+            <span id="location"></span>
+          </div>
+        </div>
+        <div class="response-entry">
+          <h2>Timezone</h2>
+          <div class="response-value">
+            UTC-<span id="timezone"></span>
+          </div>
+        </div>
+           <!-- add offset value dynamically using the API -->
+        <div class="response-entry">
+          <h2>ISP</h2>        
+          <div class="response-value">
+            <span id="isp"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <footer>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>     -->
+  </main>
+</body>
+</html>
